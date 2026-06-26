@@ -28,36 +28,27 @@
 <td class="left">
 
 <div class="name" id="sig-name">
-RHESA PRAWEDHA
 </div>
 
 <div class="text" id="sig-title">
-IT MANAGER
 </div>
 
 <div class="text hotel" id="sig-hotel">
-MERCURE SOLO
 </div>
 
 <div class="text address" id="sig-address">
-Jl. Slamet Riyadi No. 437
 </div>
 
 <div class="text city" id="sig-city">
-SOLO - INDONESIA
 </div>
 
 <div class="text phone" id="sig-phone">
-T +62 271 745 11 11
 </div>
 
 <a
 class="email"
 id="sig-email"
-href="mailto:RHESA.PRAWEDHA@ACCOR.COM">
-
-RHESA.PRAWEDHA@ACCOR.COM
-
+href="#">
 </a>
 
 <div class="logo">
@@ -153,5 +144,37 @@ alt="Mercure Banner">
 </table>
 
 </body>
+<script src="config.js"></script>
+
+<script>
+
+document.getElementById("sig-name").textContent =
+Signature.name;
+
+document.getElementById("sig-title").textContent =
+Signature.title;
+
+document.getElementById("sig-hotel").textContent =
+Signature.hotel;
+
+document.getElementById("sig-address").textContent =
+Signature.address;
+
+document.getElementById("sig-city").textContent =
+Signature.city;
+
+document.getElementById("sig-phone").textContent =
+"T " + Signature.phone;
+
+const email =
+document.getElementById("sig-email");
+
+email.textContent =
+Signature.email;
+
+email.href =
+"mailto:" + Signature.email;
+
+</script>
 </html>
 
