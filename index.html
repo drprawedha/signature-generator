@@ -11,11 +11,27 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<table class="signature" cellpadding="0" cellspacing="0" border="0">
+<table
+width="870"
+cellpadding="0"
+cellspacing="0"
+border="0"
+style="
+width:870px;
+border-collapse:collapse;
+table-layout:fixed;
+font-family:Montserrat,Arial,sans-serif;
+color:#53514F;">
 <tr>
 <!-- LEFT -->
 
-<td class="left">
+<td
+width="205"
+valign="top"
+style="
+width:215px;
+padding-right:14px;
+vertical-align:top;">
 <div class="name" id="sig-name"></div>
 
 <div class="text" id="sig-title"></div>
@@ -108,30 +124,51 @@ alt="YouTube">
 
 <!-- RIGHT -->
 
-<td class="right">
+<td
+width="665"
+valign="top"
+style="
+width:665px;
+padding-left:12px;
+vertical-align:top;">
 
 <img
-
-class="banner"
-
 src="https://mercure-solo.com/signateur/assets/banner/banner.gif"
-
-alt="Mercure Banner">
+alt="Mercure Banner"
+width="660"
+height="236"
+border="0"
+style="
+display:block;
+width:660px;
+height:236px;
+max-width:660px;
+min-width:660px;
+border:0;
+outline:none;
+text-decoration:none;
+-ms-interpolation-mode:bicubic;">
 
 </td>
 
 </tr>
 
 </table>
-
-</body>
 <script src="employees.js"></script>
 
 <script>
 
 const params = new URLSearchParams(window.location.search);
-
 const user = params.get("user") || "rhesa";
+
+if (!Employees[user]) {
+
+    document.body.innerHTML =
+        "<h2 style='font-family:Arial'>User '" + user + "' tidak ditemukan.</h2>";
+
+    throw new Error("Unknown user");
+
+}
 
 const emp = Employees[user];
 
@@ -150,16 +187,18 @@ document.getElementById("sig-city").textContent = emp.city;
 document.getElementById("sig-phone").textContent =
 "T " + emp.phone;
 
-const email =
-document.getElementById("sig-email");
+const email = document.getElementById("sig-email");
 
 email.textContent = emp.email;
 
-email.href =
-"mailto:"+emp.email;
+email.href = "mailto:" + emp.email;
+
+email.title = emp.email;
 
 }
 
 </script>
+</body>
+
 </html>
 
