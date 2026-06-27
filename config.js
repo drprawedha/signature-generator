@@ -1,8 +1,8 @@
 const Signature = {
 
-    name: "RHESA PRAWEDHA",
+    name: "EMMA WARNIDA",
 
-    title: "IT MANAGER",
+    title: "FRONT OFFICE MANAGER",
 
     hotel: "MERCURE SOLO",
 
@@ -12,6 +12,6 @@ const Signature = {
 
     phone: "+62 271 745 11 11",
 
-    email: "RHESA.PRAWEDHA@ACCOR.COM"
+    email: "EMMA.WARNIDA@ACCOR.COM"
 
 };
