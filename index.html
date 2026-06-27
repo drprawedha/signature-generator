@@ -2,53 +2,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Mercure Signature</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
 <table class="signature" cellpadding="0" cellspacing="0" border="0">
-
 <tr>
-
 <!-- LEFT -->
 
 <td class="left">
+<div class="name" id="sig-name"></div>
 
-<div class="name" id="sig-name">
-</div>
+<div class="text" id="sig-title"></div>
 
-<div class="text" id="sig-title">
-</div>
+<div class="text" id="sig-hotel"></div>
 
-<div class="text hotel" id="sig-hotel">
-</div>
+<div class="text" id="sig-address"></div>
 
-<div class="text address" id="sig-address">
-</div>
+<div class="text" id="sig-city"></div>
 
-<div class="text city" id="sig-city">
-</div>
+<div class="text" id="sig-phone"></div>
 
-<div class="text phone" id="sig-phone">
-</div>
-
-<a
-class="email"
-id="sig-email"
-href="#">
+<a class="email"
+id="sig-email">
 </a>
 
 <div class="logo">
@@ -144,36 +125,40 @@ alt="Mercure Banner">
 </table>
 
 </body>
-<script src="config.js"></script>
+<script src="employees.js"></script>
 
 <script>
 
-document.getElementById("sig-name").textContent =
-Signature.name;
+const params = new URLSearchParams(window.location.search);
 
-document.getElementById("sig-title").textContent =
-Signature.title;
+const user = params.get("user") || "rhesa";
 
-document.getElementById("sig-hotel").textContent =
-Signature.hotel;
+const emp = Employees[user];
 
-document.getElementById("sig-address").textContent =
-Signature.address;
+if(emp){
 
-document.getElementById("sig-city").textContent =
-Signature.city;
+document.getElementById("sig-name").textContent = emp.name;
+
+document.getElementById("sig-title").textContent = emp.title;
+
+document.getElementById("sig-hotel").textContent = emp.hotel;
+
+document.getElementById("sig-address").textContent = emp.address;
+
+document.getElementById("sig-city").textContent = emp.city;
 
 document.getElementById("sig-phone").textContent =
-"T " + Signature.phone;
+"T " + emp.phone;
 
 const email =
 document.getElementById("sig-email");
 
-email.textContent =
-Signature.email;
+email.textContent = emp.email;
 
 email.href =
-"mailto:" + Signature.email;
+"mailto:"+emp.email;
+
+}
 
 </script>
 </html>
