@@ -59,4 +59,24 @@ const Employees = {
         phone: "+62 271 745 11 11",
         email: "CRISTANTO.ANTO@ACCOR.COM"
     },
+
+    regina: {
+        name: "REGINA SANJA",
+        title: "MARCOMM AND GM SECRETARY",
+        hotel: "MERCURE SOLO",
+        address: "Jl. Slamet Riyadi No. 437",
+        city: "SOLO - INDONESIA",
+        phone: "+62 271 745 11 11",
+        email: "REGINA.SANJA@ACCOR.COM"
+    },
+
+    tira: {
+        name: "TIRA WANDA",
+        title: "SALES MANAGER 1",
+        hotel: "MERCURE SOLO",
+        address: "Jl. Slamet Riyadi No. 437",
+        city: "SOLO - INDONESIA",
+        phone: "+62 271 745 11 11",
+        email: "TIRA.WANDA@ACCOR.COM"
+    },
 };
