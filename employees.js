@@ -10,14 +10,14 @@ const Employees = {
         email: "RHESA.PRAWEDHA@ACCOR.COM"
     },
 
-    dodit: {
-        name: "DODIT HAPSORO",
+    intan: {
+        name: "INTAN ALICE",
         title: "GENERAL MANAGER",
         hotel: "MERCURE SOLO",
         address: "Jl. Slamet Riyadi No. 437",
         city: "SOLO - INDONESIA",
         phone: "+62 271 745 11 11",
-        email: "DODIT.HAPSORO@ACCOR.COM"
+        email: "INTAN.ALICE@ACCOR.COM"
     },
 
     diyan: {
@@ -79,4 +79,5 @@ const Employees = {
         phone: "+62 271 745 11 11",
         email: "TIRA.WANDA@ACCOR.COM"
     },
+    
 };
